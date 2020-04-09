@@ -1,0 +1,869 @@
+html{
+  height:100%;
+}
+body{
+  font-family: 'Poppins', 'Lato', Helvetica, sans-serif;
+  font-weight:300;
+  font-size: 0.8em;
+  color: #24373E;
+  height:100%;
+}
+
+nav {
+  font-family: 'Inconsolata', monospace;
+  font-size: 1.2em;
+}
+.site-content{
+  min-height:100%;
+}
+.site-main{
+  display: -webkit-flex;
+  display: -ms-flex;
+  display:flex;
+  -webkit-justify-content: center;
+  justify-content: center;
+  padding: 10em 5em 3em 18em;
+  overflow: auto;
+}
+/*footer stays at bottom tutorial https://youtu.be/qlCIXXhSX6Y*/
+footer{
+  height:2em;
+  margin-top:-2.5em;
+  position:relative;
+  font-weight: 600;
+  text-align: center;
+  color: #f8847a;
+  width:100%;
+}
+
+img{
+  width:100%;
+  height:auto;
+  display: block;
+}
+strong{
+  font-weight: 600;
+}
+
+/*-------------------------NAV--------------------------------*/
+.side-nav-left{
+  z-index:1;
+  padding-left: 5em;
+  position:fixed;
+  left:0;
+  top:0;
+  width:16em;
+  /*referred to lecture/lab */
+}
+.brand{
+  padding-top: 2em;
+}
+.brand-link{
+  display: -webkit-flex;
+  display: -ms-flex;
+  display:flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  font-family: Inconsolata, monospace;
+  font-size: 1.2em;
+  text-decoration: none;
+  color: #1988f6;
+  width:8em;
+  overflow-wrap: break-word;
+  /*https://developer.mozilla.org/en-US/docs/Web/CSS/overflow-wrap*/
+}
+.main-nav{
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding-top: 5em;
+}
+.hidden {
+	display:none;
+}
+.side-nav-link{
+  padding-bottom: 0.6em;
+  padding-right: 3em;
+  text-decoration: none;
+  color: #1988f6;
+  opacity: 0.7;
+  transition: 0.2s;
+
+}
+.link-active, .right-nav-link{
+  color: #1988f6;
+  opacity: 1;
+}
+.link-active{
+  font-weight: 700;
+}
+.side-nav-right {
+  position:fixed;
+  top: 10.8em;
+  right:0;
+  width:5em;
+  height:100vh;
+  /*referred to lecture/lab */
+
+}
+.rotate{
+  display: -webkit-flex;
+  display: -ms-flex;
+  display:flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  position: absolute;
+  transform-origin: 0 0;
+  transform: rotate(90deg) translateY(-90%);
+  /*https://css-tricks.com/snippets/css/text-rotation/*/
+  /*https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/translateY*/
+}
+
+label, button{
+  display: none;
+  color: #f8847a;
+}
+#toggle{
+  display:none;
+}
+
+a.side-nav-link:hover, a.side-nav-link:active, a.side-nav-link:hover:focus {
+  color: #f8847a;
+  transition: 0.2s;
+  opacity: 1;
+}
+.proj-thumb{
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap:wrap;
+}
+.proj-thumb-link{
+  width: 47%;
+  height: auto;
+  margin-right: 1em;
+  margin-bottom:0.5em;
+  position:relative;
+  border-radius:0;
+  overflow:hidden;
+  transition: all 0.6s ease;
+  /*https://developer.mozilla.org/en-US/docs/Web/CSS/overflow*/
+  /*https://css-tricks.com/almanac/properties/t/transition/*/
+}
+.proj-thumb-image{
+  width:100%;
+  /*https://css-tricks.com/different-transitions-for-hover-on-hover-off/*/
+}
+
+.line{
+  border-bottom: 1px solid #24373E;
+  margin:0 auto;
+  width: 60%;
+  /*https://www.w3schools.com/cssref/pr_border-top.asp*/
+}
+
+/*text overlay tutorial https://stackoverflow.com/questions/14149360/text-on-image-mouseover*/
+.overlay{
+  display: -webkit-flex;
+  display: -ms-flex;
+  display:flex;
+  justify-content: center;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width:100%;
+  height:100%;
+  position:absolute;
+  top:0;
+  left:0;
+  text-decoration: none;
+  font-size: 2em;
+  font-weight: 600;
+  color: #24373E;
+  text-align: center;
+  opacity:0;
+  background-color: rgb(197, 224, 246, 0.7);
+  transition: 0.6s;
+}
+  /*https://www.w3schools.com/css/css3_borders.asp*/
+.overlay:hover{
+  opacity:1;
+  transition: 0.6s;
+}
+.proj-thumb-link:hover{
+  border-radius: 0 25px;
+}
+
+/*-------------------------ABOUT--------------------------------*/
+.about-me{
+  border-radius: 0 25px 0 25px;
+  margin: 0 8%;
+  width:2000px;
+  /* background-image: linear-gradient(to right bottom, #8ec0f2, #b3c1f1, #cec4ed, #e2c9e6,
+  #edd0e1, #f1ccdb, #f5c9d4, #f8c6cb, #fab5b9, #fba5a6, #fa9490, #f8847a); */
+  background-image: linear-gradient(to right top, #499cee, #94a0eb, #c0a7e4, #dcb2dc, #ecc1d8, #f1c2d3, #f5c3ce, #f8c4c9, #fab4b7, #fba4a4, #fa9490, #f8847a);
+ /*https://mycolor.space/gradient3?ori=to+right+bottom&hex=%2375B5F4&hex2=%23E6D8F8&hex3=%23F8847A&submit=submit*/
+}
+
+.profile-text-container{
+  /* width: 80em; */
+  margin: 0 auto;
+}
+.profile-image-container{
+  width: 27em;
+  margin: 5em auto 0;
+  /*https://developer.mozilla.org/en-US/docs/Web/CSS/margin*/
+}
+.profile-image {
+  width:100%;
+  height:auto;
+  display:block;
+}
+.about-intro{
+  display: -webkit-flex;
+  display: -ms-flex;
+  display:flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-justify-content: center;
+  justify-content: center;
+  font-family: 'Open Sans', 'Lato', 'Trebuchet MS', Helvetica, sans-serif;
+  font-style: normal;
+  /*https://stackoverflow.com/questions/24061808/google-font-not-working-on-safari*/
+  font-size:2.7em;
+  letter-spacing: 0.1em;
+  margin: 0 auto;
+}
+.about-im{
+  color:#1988f6;
+  padding-right: 0.25em;
+  font-weight:700;
+}
+.about-name{
+  /* -webkit-text-fill-color: white; */
+  color: rgb(0, 0, 0, 0);
+  -webkit-text-stroke-width:2px;
+  -webkit-text-stroke-color: #1988f6;
+  font-weight: 800;
+  letter-spacing: 0.105em;
+}
+.text-half{
+  line-height: 2.2em;
+  font-size:1.4em;
+  margin-top: 0;
+  padding: 0 7% 2.2em;
+  letter-spacing: 1px;
+  /*https://www.w3schools.com/cssref/pr_text_letter-spacing.asp*/
+}
+/*-----------------------PROJECTS-----------------------------*/
+.main-content{
+  display: -webkit-flex;
+  display: -ms-flex;
+  display:flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  overflow: hidden;
+  margin: 0 13%;
+}
+.greybox{
+  background-color: #F1F1F1;
+  border-radius: 0 25px 0 25px;
+}
+.last-greybox{
+  margin-bottom: 4em;
+}
+.proj-header{
+  text-transform: uppercase;
+  font-weight: 300;
+  letter-spacing: 0.1em;
+  color: #f8847a;
+  margin: 0;
+}
+.proj-text, .proj-text2{
+  line-height: 1.7em;
+}
+.proj-text2{
+  padding: 1.2em 0;
+}
+.final-video{
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+.final-video iframe{
+  border: 0;
+}
+.introduction{
+  font-weight: 400;
+  font-size:1.7em;
+  color: #f8847a;
+  text-align: center;
+  padding: 1.5em 0;
+}
+
+/*Project Data*/
+h4{
+  margin-bottom:0;
+}
+.project-roles{
+  display: -webkit-flex;
+  display: -ms-flex;
+  display:flex;
+  -webkit-justify-content: space-evenly;
+  justify-content: space-evenly;
+  /*https://developer.mozilla.org/en-US/docs/Web/CSS/justify-content*/
+  -webkit-flex-flow: row wrap;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+  padding-top: 4em;
+  height:auto;
+  margin: 0 auto;
+}
+.proj-data{
+  display: -webkit-flex;
+  display: -ms-flex;
+  display:flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+.data-bold{
+  font-weight: 700;
+  margin:0;
+}
+.name-link{
+  color: #1988f6;
+  transition: 0.2s;
+  text-decoration: none;
+}
+.name-link:hover, .name-link:active, .name-link:focus{
+  color: #f8847a;
+  transition: 0.2s;
+}
+
+/*Ecodrop Design Opportunity*/
+.design-opportunity, .persona-section, .section-greybox, .shower-section{
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-pack: distribute;
+  -webkit-justify-content: space-around;
+  justify-content: space-around;
+  padding: 4em 4%;
+}
+.design-opportunity-text, .persona-text, .shower-text{
+  display: -webkit-flex;
+  display: -ms-flex;
+  display:flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+.shower-text{
+  padding-right: 5em;
+}
+.design-opportunity{
+  padding: 2em 3em 0 3em;
+}
+.persona-text{
+  padding-right:3em;
+}
+.design-opportunity-text{
+  width: 25%;
+}
+.design-opportunity-image{
+  width:65%;
+}
+.ecodrop-image{
+  width:100%;
+  height: auto;
+}
+/*Ecodrop Persona*/
+.persona-section{
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+.persona-text{
+  width:25%;
+}
+.persona-image{
+  width:75%;
+}
+/*Project greybox section*/
+.section-greybox{
+  display: -webkit-flex;
+  display: -ms-flex;
+  display:flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+.block-section, .persona-section{
+  padding: 4em 0;
+}
+
+figure{
+  margin:0;
+}
+figcaption{
+  text-align: center;
+  color: #1988f6;
+}
+.greybox-image-box{
+  width:49.5%;
+  height: auto;
+}
+.greybox-image{
+  width:100%;
+}
+.center-image{
+  width:100%;
+}
+.sprite{
+  width:382px;
+  height:auto;
+}
+/*wizard images*/
+.image-container, .slide-container{
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  flex-wrap: wrap;
+}
+.image-container{
+  justify-content: space-between;
+}
+.midair-image{
+  max-width:773px;
+  height:auto;
+}
+.center-image{
+  display: -webkit-flex;
+  display: -ms-flex;
+  display:flex;
+  -moz-box-align: start;
+  -ms-flex-align: start;
+  -webkit-align-items: flex-start;
+  align-items: flex-start;
+  /*https://stackoverflow.com/questions/57516373/image-stretching-in-flexbox-in-safari*/
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+/*-----------------------MEDIA QUERIES---------------------------*/
+
+@media(max-width: 1590px) {
+  /* body{
+    background-color: lightyellow;
+  } */
+  /*-------NAV---------*/
+  .proj-thumb-link{
+    width: 48%;
+  }
+  /*-------ABOUT---------*/
+
+  /*-------PROJECT---------*/
+  .slide-container{
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+  .slide-image{
+    width: 100%;
+  }
+}
+
+@media(max-width: 1280px) {
+  /* body{
+    background-color: oldlace;
+  } */
+
+  /*-------ABOUT---------*/
+  .text-half{
+    line-height: 2.2em;
+    font-size:1.2em;
+  }
+  .about-im, .about-name{
+    margin: 0.3em 0;
+  }
+  /*-------PROJECT---------*/
+
+  .final-video iframe{
+    width:680px;
+    height:390px;
+    top:0;
+  }
+  .design-opportunity-text{
+    width:40%;
+    padding-left: 0;
+  }
+  .design-opportunity-image{
+    width: 60%;
+  }
+  .persona-section{
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+  .persona-text{
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+  }
+  .persona-image{
+    width: 100%;
+  }
+  .shower-text{
+    padding-right: 3em;
+  }
+  video{
+    width:220px;
+    height:440px;
+  }
+  .main-content{
+    margin: 0 5%;
+  }
+}
+
+@media (max-width: 990px){
+  /* body{
+    background-color: lightcyan;
+  } */
+
+  /*-------NAV---------*/
+  .rotate{
+    transform: rotate(90deg) translateY(-120%);
+  }
+  .side-nav-left{
+    padding-left: 3.5em;
+  }
+  /*------HOME----------*/
+  .proj-thumb-link{
+    width: 100%;
+  }
+  .site-main{
+    padding-left: 15.5em;
+  }
+  /*-------ABOUT---------*/
+  .about-im, .about-name{
+    margin: 0.3em 0;
+  }
+  .profile-image-container{
+    width:22em;
+
+  }
+  .about-intro{
+    font-size: 2.2em;
+  }
+  .about-me, .grid-about-me{
+    margin:0;
+  }
+  /*-------PROJECT-----*/
+  .introduction{
+    margin:0;
+  }
+  .project-roles{
+    padding-top: 2em;
+  }
+  .design-opportunity, .shower-section{
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+  .design-opportunity-text{
+    margin:0;
+    width:100%;
+
+  }
+  .design-opportunity-image{
+    width: 100%;
+  }
+  .block-section, .persona-section{
+   padding: 3em 0;
+ }
+ .shower-section{
+   padding: 1em 0;
+ }
+  /*reference for responsive video https://www.ostraining.com/blog/coding/responsive-videos/*/
+  .final-video{
+    overflow:hidden;
+    padding-bottom:20%;
+    height:15em;
+  }
+  .final-video iframe{
+    left:10em;
+    height:150%;
+    width:150%;
+  }
+  .shower-text{
+    padding:0;
+  }
+  video{
+    display: block;
+    margin:0 auto;
+    /*https://stackoverflow.com/questions/17508729/how-do-you-center-a-video-using-css/31880583*/
+  }
+  .main-content{
+    margin: 0;
+  }
+  /*wizard project*/
+  .image-container{
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+  .greybox-image-box{
+    width:100%;
+  }
+  .greybox-image{
+    padding-right: 0em;
+    padding-bottom: 1em;
+  }
+}
+
+@media (max-width: 767px) {
+  /* body{
+    background-color: lavender;
+  } */
+  /*-------NAV---------*/
+  .side-nav-left{
+    padding-left: 2em;
+  }
+  .rotate{
+    transform: rotate(90deg) translateY(-180%);
+  }
+  /*------HOME----------*/
+  .site-main{
+    padding-right: 3em;
+    padding-left: 13em;
+  }
+  /*------ABOUT----------*/
+  .text-half{
+    line-height: 2em;
+  }
+  /*------PROJECT------*/
+  /*reference for responsive video*/
+  .final-video{
+    overflow:hidden;
+    padding-bottom:10%;
+    height:13.5em;
+  }
+  .final-video iframe{
+    height:130%;
+    width:130%;
+  }
+  .proj-data{
+    display: inline-block;
+  }
+  .project-roles{
+    -moz-justify-content: flex-start;
+    -ms-justify-content: flex-start;
+    -webkit-justify-content: flex-start;
+    justify-content: flex-start;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+
+  }
+  .roles, .team, .type, .tools{
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    padding: 0.7em 0;
+  }
+  .data-bold{
+    padding-right: 0.6em;
+  }
+  .data-reg{
+    padding-right: 0.2em;
+  }
+  .design-opportunity{
+    padding:4em 4% 0;
+  }
+
+  /*Wizard Project*/
+  .proj-text2{
+    padding: 0;
+  }
+}
+@media (max-width: 640px) {
+  /* body{
+    background-color:mistyrose;
+  } */
+
+  /*-----------NAV---------*/
+  /*hamburger menu tutorial https://www.youtube.com/watch?v=xMTs8tAapnQ*/
+  label, button {
+    display: -webkit-flex;
+    display: -ms-flex;
+    display:flex;
+    cursor: pointer;
+    position:absolute;
+    top:1em;
+    font-size: 1.5em;
+    top:0.8em;
+    font-size: 1.7em;
+    padding-left:5%;
+    transition: 0.2s;
+  }
+  label:hover, label:active, label:focus{
+    color:#1988f6;
+    transition: 0.2s;
+  }
+  .side-nav-left{
+    width:100%;
+    padding:0;
+  }
+  .brand{
+    display: -webkit-flex;
+    display: -ms-flex;
+    display:flex;
+    -webkit-justify-content: center;
+    justify-content:center;
+    background-color: white;
+    padding-bottom: 2em;
+  }
+  .brand-link{
+    width:17em;
+    margin: 0 2.5em;
+  }
+  .main-nav a{
+    display: block;
+    padding: 0.6em 0;
+    padding-left: 4em;
+  }
+  .main-nav {
+    height: 13em;
+    padding-top: 2em;
+    -webkit-box-shadow: 0px 41px 42px -45px rgba(0,0,0,0.65);
+    -moz-box-shadow: 0px 41px 42px -45px rgba(0,0,0,0.65);
+    box-shadow: 0px 41px 42px -45px rgba(0,0,0,0.65);
+    background-color: white;
+    display:none;
+  }
+  /*box shadow https://www.cssmatic.com/box-shadow*/
+  #toggle:checked + .main-nav{
+    display: block;
+  }
+
+
+  /*------HOME----------*/
+  .site-main{
+    padding-left: 1%;
+  }
+  /*-------ABOUT---------*/
+  .text-half{
+    font-size: 1em;
+    padding: 0 8% 3em;
+  }
+  /*----PROJECT--------*/
+  .introduction{
+    font-size: 1.5em;
+  }
+  .design-opportunity-text{
+    margin: 0;
+    padding:0;
+    width:100%;
+
+  }
+  .project-roles{
+    padding-left:1em;
+  }
+}
+
+@media only screen and (max-width: 479px){
+  body{
+    background-color: white;
+  }
+  /*----------HOME----------*/
+  .overlay{
+    font-size: 1.5em;
+  }
+
+  /*------ABOUT----------*/
+  .about-intro{
+    font-size: 2em;
+  }
+
+  /*------PROJECT----------*/
+  .introduction{
+    text-align: left;
+    font-size: 1.25em;
+  }
+  .data-bold{
+    padding-bottom: 0.3em;
+  }
+
+  .roles, .team, .type, .tools{
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+
+  }
+  .project-roles{
+    -moz-justify-content: flex-start;
+    -ms-justify-content: flex-start;
+    -webkit-justify-content: flex-start;
+    justify-content: flex-start;
+    padding-left:0;
+  }
+  .sprite{
+    width: 100%;
+    height:auto;
+  }
+}
+@media only screen and (max-width: 328px){
+  .profile-image-container{
+    width:80%;
+    height: auto;
+  }
+  .about-intro{
+    font-size: 1em;
+    flex-direction: column;
+    align-items: center;
+  }
+  .overlay{
+    font-size: 1em;
+  }
+  video{
+    width:165px;
+    height:330px;
+  }
+  .final-video{
+    overflow:hidden;
+    padding-bottom:12%;
+    height:10em;
+  }
+  .final-video iframe{
+    height:80%;
+    width:800%;
+  }
+  .page-heading{
+    font-size:1.5rem;
+  }
+}
