@@ -152,7 +152,7 @@ a.side-nav-link:hover, a.side-nav-link:active, a.side-nav-link:hover:focus {
   width: 47%;
   height: auto;
   margin-right: 1em;
-  margin-bottom:0.5em;
+  margin-bottom:0.8em;
   position:relative;
   border-radius:0;
   overflow:hidden;
@@ -478,9 +478,12 @@ figcaption{
   /* body{
     background-color: lightyellow;
   } */
+  .site-main{
+    padding-left: 15.5em;
+  }
   /*-------NAV---------*/
   .proj-thumb-link{
-    width: 48%;
+    width: 47%;
   }
   /*-------ABOUT---------*/
 
@@ -562,9 +565,6 @@ figcaption{
   /*------HOME----------*/
   .proj-thumb-link{
     width: 100%;
-  }
-  .site-main{
-    padding-left: 15.5em;
   }
   /*-------ABOUT---------*/
   .about-im, .about-name{
@@ -724,7 +724,6 @@ figcaption{
     display:flex;
     cursor: pointer;
     position:absolute;
-    top:1em;
     font-size: 1.5em;
     top:0.8em;
     font-size: 1.7em;
@@ -759,7 +758,7 @@ figcaption{
   }
   .main-nav {
     height: 13em;
-    padding-top: 2em;
+    padding:2em 0;
     -webkit-box-shadow: 0px 41px 42px -45px rgba(0,0,0,0.65);
     -moz-box-shadow: 0px 41px 42px -45px rgba(0,0,0,0.65);
     box-shadow: 0px 41px 42px -45px rgba(0,0,0,0.65);
