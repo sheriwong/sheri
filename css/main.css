@@ -278,7 +278,7 @@ a.side-nav-link:hover, a.side-nav-link:active, a.side-nav-link:hover:focus {
   margin: 0 13%;
 }
 .greybox{
-  background-color: #F1F1F1;
+  background-color: #F4F4F4;
   border-radius: 0 25px 0 25px;
 }
 .last-greybox{
@@ -356,7 +356,7 @@ h4{
 }
 
 /*Ecodrop Design Opportunity*/
-.design-opportunity, .persona-section, .section-greybox, .shower-section{
+.design-opportunity, .persona-section, .section-greybox, .halfscreen-section{
   display: -webkit-flex;
   display: -ms-flex;
   display: flex;
@@ -368,7 +368,7 @@ h4{
   justify-content: space-around;
   padding: 4em 4%;
 }
-.design-opportunity-text, .persona-text, .shower-text{
+.design-opportunity-text, .persona-text, .halfscreen-text{
   display: -webkit-flex;
   display: -ms-flex;
   display:flex;
@@ -378,7 +378,7 @@ h4{
   -webkit-justify-content: center;
   justify-content: center;
 }
-.shower-text{
+.halfscreen-text{
   padding-right: 5em;
 }
 .design-opportunity{
@@ -539,7 +539,7 @@ figcaption{
   .persona-image{
     width: 100%;
   }
-  .shower-text{
+  .halfscreen-text{
     padding-right: 3em;
   }
   video{
@@ -588,7 +588,7 @@ figcaption{
   .project-roles{
     padding-top: 2em;
   }
-  .design-opportunity, .shower-section{
+  .design-opportunity, .halfscreen-section{
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
@@ -604,7 +604,7 @@ figcaption{
   .block-section, .persona-section{
    padding: 3em 0;
  }
- .shower-section{
+ .halfscreen-section{
    padding: 1em 0;
  }
   /*reference for responsive video https://www.ostraining.com/blog/coding/responsive-videos/*/
@@ -618,7 +618,7 @@ figcaption{
     height:150%;
     width:150%;
   }
-  .shower-text{
+  .halfscreen-text{
     padding:0;
   }
   video{
