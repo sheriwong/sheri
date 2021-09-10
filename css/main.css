@@ -2,16 +2,17 @@ html{
   height:100%;
 }
 body{
-  font-family: 'Poppins', 'Lato', Helvetica, sans-serif;
-  font-weight:300;
-  font-size: 0.8em;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-weight:400;
+  font-size: 0.95em;
+  line-height: 1.25em;
   color: #24373E;
   height:100%;
 }
 
 nav {
   font-family: 'Inconsolata', monospace;
-  font-size: 1.2em;
+  font-size: 1em;
 }
 .site-content{
   min-height:100%;
@@ -28,7 +29,7 @@ nav {
 /*footer stays at bottom tutorial https://youtu.be/qlCIXXhSX6Y*/
 footer{
   height:2em;
-  margin-top:-2.5em;
+  margin-top:.5em;
   position:relative;
   font-weight: 600;
   text-align: center;
@@ -65,10 +66,10 @@ strong{
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  font-family: Inconsolata, monospace;
+  font-family: 'Inconsolata', monospace;
   font-size: 1.2em;
   text-decoration: none;
-  color: #1988f6;
+  color: #1575D5;
   width:8em;
   overflow-wrap: break-word;
   /*https://developer.mozilla.org/en-US/docs/Web/CSS/overflow-wrap*/
@@ -82,6 +83,9 @@ strong{
   flex-direction: column;
   padding-top: 5em;
 }
+li{
+  line-height: 1.7em;
+}
 .hidden {
 	display:none;
 }
@@ -89,13 +93,12 @@ strong{
   padding-bottom: 0.6em;
   padding-right: 3em;
   text-decoration: none;
-  color: #1988f6;
-  opacity: 0.7;
+  color: #1575D5;
   transition: 0.2s;
 
 }
 .link-active, .right-nav-link{
-  color: #1988f6;
+  color: #1575D5;
   opacity: 1;
 }
 .link-active{
@@ -164,6 +167,9 @@ a.side-nav-link:hover, a.side-nav-link:active, a.side-nav-link:hover:focus {
   width:100%;
   /*https://css-tricks.com/different-transitions-for-hover-on-hover-off/*/
 }
+.project-image-map{
+  margin-top:1em;
+}
 
 .line{
   border-bottom: 1px solid #24373E;
@@ -196,7 +202,7 @@ a.side-nav-link:hover, a.side-nav-link:active, a.side-nav-link:hover:focus {
   transition: 0.6s;
 }
   /*https://www.w3schools.com/css/css3_borders.asp*/
-.overlay:hover{
+.overlay:hover, .overlay:focus{
   opacity:1;
   transition: 0.6s;
 }
@@ -206,13 +212,24 @@ a.side-nav-link:hover, a.side-nav-link:active, a.side-nav-link:hover:focus {
 
 /*-------------------------ABOUT--------------------------------*/
 .about-me{
-  border-radius: 0 25px 0 25px;
+  /* border-radius: 0 25px 0 25px; */
   margin: 0 8%;
   width:2000px;
   /* background-image: linear-gradient(to right bottom, #8ec0f2, #b3c1f1, #cec4ed, #e2c9e6,
   #edd0e1, #f1ccdb, #f5c9d4, #f8c6cb, #fab5b9, #fba5a6, #fa9490, #f8847a); */
-  background-image: linear-gradient(to right top, #499cee, #94a0eb, #c0a7e4, #dcb2dc, #ecc1d8, #f1c2d3, #f5c3ce, #f8c4c9, #fab4b7, #fba4a4, #fa9490, #f8847a);
+  /* background-image: linear-gradient(to right top, #499cee, #94a0eb, #c0a7e4, #dcb2dc, #ecc1d8, #f1c2d3, #f5c3ce, #f8c4c9, #fab4b7, #fba4a4, #fa9490, #f8847a); */
  /*https://mycolor.space/gradient3?ori=to+right+bottom&hex=%2375B5F4&hex2=%23E6D8F8&hex3=%23F8847A&submit=submit*/
+}
+.wave{
+  margin:0 0 0 0.5em;
+  font-size:8em;
+  line-height: 0.7em;
+  font-weight:400;
+  /* transform: rotate(90deg); */
+  transform:translate(0, 1.5em);
+  background: -webkit-linear-gradient(#f8847a, #1575D5);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .profile-text-container{
@@ -220,7 +237,7 @@ a.side-nav-link:hover, a.side-nav-link:active, a.side-nav-link:hover:focus {
   margin: 0 auto;
 }
 .profile-image-container{
-  width: 27em;
+  width: 15em;
   margin: 5em auto 0;
   /*https://developer.mozilla.org/en-US/docs/Web/CSS/margin*/
 }
@@ -246,7 +263,7 @@ a.side-nav-link:hover, a.side-nav-link:active, a.side-nav-link:hover:focus {
   margin: 0 auto;
 }
 .about-im{
-  color:#1988f6;
+  color:#1575D5;
   padding-right: 0.25em;
   font-weight:700;
 }
@@ -254,13 +271,13 @@ a.side-nav-link:hover, a.side-nav-link:active, a.side-nav-link:hover:focus {
   /* -webkit-text-fill-color: white; */
   color: rgb(0, 0, 0, 0);
   -webkit-text-stroke-width:2px;
-  -webkit-text-stroke-color: #1988f6;
+  -webkit-text-stroke-color: #1575D5;
   font-weight: 800;
   letter-spacing: 0.105em;
 }
 .text-half{
-  line-height: 2.2em;
-  font-size:1.4em;
+  line-height: 2em;
+  font-size:1.15em;
   margin-top: 0;
   padding: 0 7% 2.2em;
   letter-spacing: 1px;
@@ -286,7 +303,7 @@ a.side-nav-link:hover, a.side-nav-link:active, a.side-nav-link:hover:focus {
 }
 .proj-header{
   text-transform: uppercase;
-  font-weight: 300;
+  font-weight: 500;
   letter-spacing: 0.1em;
   color: #f8847a;
   margin: 0;
@@ -310,6 +327,7 @@ a.side-nav-link:hover, a.side-nav-link:active, a.side-nav-link:hover:focus {
 .introduction{
   font-weight: 400;
   font-size:1.7em;
+  line-height: 1.2em;
   color: #f8847a;
   text-align: center;
   padding: 1.5em 0;
@@ -346,7 +364,7 @@ h4{
   margin:0;
 }
 .name-link{
-  color: #1988f6;
+  color: #1575D5;
   transition: 0.2s;
   text-decoration: none;
 }
@@ -430,7 +448,7 @@ figure{
 }
 figcaption{
   text-align: center;
-  color: #1988f6;
+  color: #1575D5;
   padding-top:0.5em;
 }
 .greybox-image-box{
@@ -494,38 +512,6 @@ figcaption{
     -ms-flex-direction: column;
     flex-direction: column;
   }
-  .slide-image{
-    width: 100%;
-  }
-}
-
-@media(max-width: 1280px) {
-  /* body{
-    background-color: oldlace;
-  } */
-
-  /*-------ABOUT---------*/
-  .text-half{
-    line-height: 2.2em;
-    font-size:1.2em;
-  }
-  .about-im, .about-name{
-    margin: 0.3em 0;
-  }
-  /*-------PROJECT---------*/
-
-  .final-video iframe{
-    width:680px;
-    height:390px;
-    top:0;
-  }
-  .design-opportunity-text{
-    width:40%;
-    padding-left: 0;
-  }
-  .design-opportunity-image{
-    width: 60%;
-  }
   .persona-section{
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
@@ -539,6 +525,52 @@ figcaption{
   .persona-image{
     width: 100%;
   }
+  .design-opportunity-text{
+    width:40%;
+    padding-left: 0;
+  }
+  .design-opportunity-image{
+    width: 60%;
+  }
+  .slide-image{
+    width: 100%;
+  }
+}
+
+@media(max-width: 1280px) {
+  /* body{
+    background-color: oldlace;
+  } */
+
+  /*-------ABOUT---------*/
+  .about-im, .about-name{
+    margin: 0.3em 0;
+    padding-top: 0.4em;
+  }
+  .text-half{
+    padding-top:2em;
+  }
+  /*-------PROJECT---------*/
+
+  .final-video iframe{
+    width:680px;
+    height:390px;
+    top:0;
+  }
+  .design-opportunity{
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+  .design-opportunity-text{
+    margin:0;
+    width:100%;
+
+  }
+  .design-opportunity-image{
+    width: 100%;
+  }
+
   .halfscreen-text{
     padding-right: 3em;
   }
@@ -571,16 +603,15 @@ figcaption{
   .about-im, .about-name{
     margin: 0.3em 0;
   }
-  .profile-image-container{
-    width:22em;
 
-  }
   .about-intro{
     font-size: 2.2em;
   }
   .about-me, .grid-about-me{
     margin:0;
   }
+
+
   /*-------PROJECT-----*/
   .introduction{
     margin:0;
@@ -588,19 +619,12 @@ figcaption{
   .project-roles{
     padding-top: 2em;
   }
-  .design-opportunity, .halfscreen-section{
+  .halfscreen-section{
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
   }
-  .design-opportunity-text{
-    margin:0;
-    width:100%;
 
-  }
-  .design-opportunity-image{
-    width: 100%;
-  }
   .block-section, .persona-section{
    padding: 3em 0;
  }
@@ -661,9 +685,8 @@ figcaption{
     padding-left: 13em;
   }
   /*------ABOUT----------*/
-  .text-half{
-    line-height: 2em;
-  }
+
+
   /*------PROJECT------*/
   /*reference for responsive video*/
   .final-video{
@@ -726,13 +749,13 @@ figcaption{
     cursor: pointer;
     position:absolute;
     font-size: 1.5em;
-    top:0.8em;
+    top:1.1em;
     font-size: 1.7em;
     padding-left:5%;
     transition: 0.2s;
   }
   label:hover, label:active, label:focus{
-    color:#1988f6;
+    color:#1575D5;
     transition: 0.2s;
   }
   .side-nav-left{
@@ -779,7 +802,10 @@ figcaption{
   /*-------ABOUT---------*/
   .text-half{
     font-size: 1em;
-    padding: 0 8% 3em;
+    padding: 2em 8% 3em;
+  }
+  .wave{
+    margin:0;
   }
   /*----PROJECT--------*/
   .introduction{
@@ -807,7 +833,12 @@ figcaption{
 
   /*------ABOUT----------*/
   .about-intro{
-    font-size: 2em;
+    font-size: 1.8em;
+    padding-bottom: 1em;
+  }
+  .text-half{
+    font-size: 1em;
+    padding: 0 5%;
   }
 
   /*------PROJECT----------*/
