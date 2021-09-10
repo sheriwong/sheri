@@ -749,7 +749,7 @@ figcaption{
     cursor: pointer;
     position:absolute;
     font-size: 1.5em;
-    top:1.1em;
+    top:1.2em;
     font-size: 1.7em;
     padding-left:5%;
     transition: 0.2s;
@@ -829,6 +829,9 @@ figcaption{
   /*----------HOME----------*/
   .overlay{
     font-size: 1.5em;
+  }
+  .brand-link{
+      transform:translate(15px);
   }
 
   /*------ABOUT----------*/
