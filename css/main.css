@@ -202,11 +202,11 @@ a.side-nav-link:hover, a.side-nav-link:active, a.side-nav-link:hover:focus {
   transition: 0.6s;
 }
   /*https://www.w3schools.com/css/css3_borders.asp*/
-.overlay:hover, .overlay:focus{
+.overlay:hover, .overlay:focus, .overlay:active{
   opacity:1;
   transition: 0.6s;
 }
-.proj-thumb-link:hover{
+.proj-thumb-link:hover, .proj-thumb-link:active{
   border-radius: 0 25px;
 }
 
