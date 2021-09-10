@@ -430,6 +430,18 @@ h4{
 .persona-image{
   width:75%;
 }
+
+/*Project Style Profile*/
+.design-image{
+  padding-bottom: 1.5em;
+}
+.prototype-image{
+  padding-top:1em;
+  width:70%;
+}
+.prototype-image:hover{
+  opacity: 70%;
+}
 /*Project greybox section*/
 .section-greybox{
   display: -webkit-flex;
@@ -551,6 +563,9 @@ figcaption{
     padding-top:2em;
   }
   /*-------PROJECT---------*/
+  .design-image{
+    width:50%;
+  }
 
   .final-video iframe{
     width:680px;
@@ -613,6 +628,9 @@ figcaption{
 
 
   /*-------PROJECT-----*/
+  .design-image{
+    width:100%;
+  }
   .introduction{
     margin:0;
   }
