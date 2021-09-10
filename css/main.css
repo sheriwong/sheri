@@ -1,3 +1,4 @@
+/* colour blue 2870BD */
 html{
   height:100%;
 }
@@ -11,7 +12,7 @@ body{
 }
 
 nav {
-  font-family: 'Inconsolata', monospace;
+  /* font-family: 'Inconsolata', monospace; */
   font-size: 1em;
 }
 .site-content{
@@ -66,10 +67,10 @@ strong{
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  font-family: 'Inconsolata', monospace;
   font-size: 1.2em;
+  font-weight:500;
   text-decoration: none;
-  color: #1575D5;
+  color: #2870BD;
   width:8em;
   overflow-wrap: break-word;
   /*https://developer.mozilla.org/en-US/docs/Web/CSS/overflow-wrap*/
@@ -93,12 +94,12 @@ li{
   padding-bottom: 0.6em;
   padding-right: 3em;
   text-decoration: none;
-  color: #1575D5;
+  color: #2870BD;
   transition: 0.2s;
 
 }
 .link-active, .right-nav-link{
-  color: #1575D5;
+  color: #2870BD;
   opacity: 1;
 }
 .link-active{
@@ -227,7 +228,7 @@ a.side-nav-link:hover, a.side-nav-link:active, a.side-nav-link:hover:focus {
   font-weight:400;
   /* transform: rotate(90deg); */
   transform:translate(0, 1.5em);
-  background: -webkit-linear-gradient(#f8847a, #1575D5);
+  background: -webkit-linear-gradient(#f8847a, #2870BD);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -263,7 +264,7 @@ a.side-nav-link:hover, a.side-nav-link:active, a.side-nav-link:hover:focus {
   margin: 0 auto;
 }
 .about-im{
-  color:#1575D5;
+  color:#2870BD;
   padding-right: 0.25em;
   font-weight:700;
 }
@@ -271,7 +272,7 @@ a.side-nav-link:hover, a.side-nav-link:active, a.side-nav-link:hover:focus {
   /* -webkit-text-fill-color: white; */
   color: rgb(0, 0, 0, 0);
   -webkit-text-stroke-width:2px;
-  -webkit-text-stroke-color: #1575D5;
+  -webkit-text-stroke-color: #2870BD;
   font-weight: 800;
   letter-spacing: 0.105em;
 }
@@ -364,7 +365,7 @@ h4{
   margin:0;
 }
 .name-link{
-  color: #1575D5;
+  color: #2870BD;
   transition: 0.2s;
   text-decoration: none;
 }
@@ -460,7 +461,7 @@ figure{
 }
 figcaption{
   text-align: center;
-  color: #1575D5;
+  color: #2870BD;
   padding-top:0.5em;
 }
 .greybox-image-box{
@@ -773,7 +774,7 @@ figcaption{
     transition: 0.2s;
   }
   label:hover, label:active, label:focus{
-    color:#1575D5;
+    color:#2870BD;
     transition: 0.2s;
   }
   .side-nav-left{
