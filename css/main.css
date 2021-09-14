@@ -478,6 +478,10 @@ figcaption{
   width:382px;
   height:auto;
 }
+.web-video{
+  padding-top:1.5em;
+  padding-bottom:2em;
+}
 /*wizard images*/
 .image-container, .slide-container{
   display: -webkit-flex;
@@ -548,6 +552,10 @@ figcaption{
   .slide-image{
     width: 100%;
   }
+  .web-video{
+    width:718.5px;
+    height:501px;
+  }
 }
 
 @media(max-width: 1280px) {
@@ -590,12 +598,19 @@ figcaption{
   .halfscreen-text{
     padding-right: 3em;
   }
-  video{
+  .mobile-video{
     width:220px;
     height:440px;
   }
   .main-content{
     margin: 0 5%;
+  }
+  .prototype-image{
+    width:100%;
+  }
+  .web-video{
+    width:479px;
+    height:334px;
   }
 }
 
@@ -664,7 +679,7 @@ figcaption{
   .halfscreen-text{
     padding:0;
   }
-  video{
+  .mobile-video{
     display: block;
     margin:0 auto;
     /*https://stackoverflow.com/questions/17508729/how-do-you-center-a-video-using-css/31880583*/
@@ -748,11 +763,16 @@ figcaption{
   .design-opportunity{
     padding:4em 4% 0;
   }
+  .web-video{
+    width:360px;
+    height:250.5px;
+  }
 
   /*Wizard Project*/
   .proj-text2{
     padding: 0;
   }
+
 }
 @media (max-width: 640px) {
   /* body{
@@ -800,7 +820,7 @@ figcaption{
     padding-left: 4em;
   }
   .main-nav {
-    height: 16em;
+    height: 12em;
     padding:2em 0;
     -webkit-box-shadow: 0px 41px 42px -45px rgba(0,0,0,0.65);
     -moz-box-shadow: 0px 41px 42px -45px rgba(0,0,0,0.65);
@@ -838,6 +858,10 @@ figcaption{
   }
   .project-roles{
     padding-left:1em;
+  }
+  .web-video{
+    width:479px;
+    height:334px;
   }
 }
 
@@ -889,6 +913,10 @@ figcaption{
     width: 100%;
     height:auto;
   }
+  .web-video{
+    width:360px;
+    height:250.5px;
+  }
 }
 @media only screen and (max-width: 328px){
   .profile-image-container{
@@ -903,7 +931,7 @@ figcaption{
   .overlay{
     font-size: 1em;
   }
-  video{
+  .mobile-video{
     width:165px;
     height:330px;
   }
