@@ -438,7 +438,8 @@ h4{
 }
 .prototype-image{
   padding-top:1em;
-  width:70%;
+  width:100%;
+  transition: all 1s ease;
 }
 .prototype-image:hover{
   opacity: 70%;
