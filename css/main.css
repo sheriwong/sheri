@@ -375,7 +375,7 @@ h4{
 }
 
 /*Ecodrop Design Opportunity*/
-.design-opportunity, .persona-section, .section-greybox, .halfscreen-section{
+.design-opportunity, .section-greybox, .halfscreen-section{
   display: -webkit-flex;
   display: -ms-flex;
   display: flex;
@@ -387,7 +387,7 @@ h4{
   justify-content: space-around;
   padding: 4em 4%;
 }
-.design-opportunity-text, .persona-text, .halfscreen-text{
+.design-opportunity-text, .half-text, .halfscreen-text{
   display: -webkit-flex;
   display: -ms-flex;
   display:flex;
@@ -403,8 +403,8 @@ h4{
 .design-opportunity{
   padding: 2em 3em 0 3em;
 }
-.persona-text{
-  padding-right:3em;
+.half-text{
+  padding-left:2em;
 }
 .design-opportunity-text{
   width: 25%;
@@ -416,8 +416,8 @@ h4{
   width:100%;
   height: auto;
 }
-/*Ecodrop Persona*/
-.persona-section{
+/*Ecodrop half*/
+.half-section{
   display: -webkit-flex;
   display: -ms-flex;
   display: flex;
@@ -425,11 +425,11 @@ h4{
   -ms-flex-direction: row;
   flex-direction: row;
 }
-.persona-text{
-  width:25%;
+.half-text{
+  width:40%;
 }
-.persona-image{
-  width:75%;
+.half-image{
+  width:70%;
 }
 
 /*Project Style Profile*/
@@ -453,8 +453,11 @@ h4{
   -ms-flex-direction: column;
   flex-direction: column;
 }
-.block-section, .persona-section{
+.block-section{
   padding: 4em 4%;
+}
+.half-section{
+  padding-top: 3em;
 }
 
 figure{
@@ -530,17 +533,17 @@ figcaption{
     -ms-flex-direction: column;
     flex-direction: column;
   }
-  .persona-section{
+  .half-section{
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
   }
-  .persona-text{
+  .half-text{
     width: 100%;
     margin: 0 auto;
     padding: 0;
   }
-  .persona-image{
+  .half-image{
     width: 100%;
   }
   .design-opportunity-text{
@@ -660,7 +663,7 @@ figcaption{
     flex-direction: column;
   }
 
-  .block-section, .persona-section{
+  .block-section, .half-section{
    padding: 3em 0;
  }
  .halfscreen-section{
