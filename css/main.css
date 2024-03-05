@@ -4,7 +4,7 @@ html{
 }
 body{
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  font-weight:400;
+  font-weight:350;
   font-size: 0.95em;
   line-height: 1.25em;
   color: #24373E;
@@ -67,8 +67,9 @@ strong{
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
+  font-family: "Open sans";
   font-size: 1.2em;
-  font-weight:500;
+  font-weight:700;
   text-decoration: none;
   color: #2870BD;
   width:8em;
@@ -815,7 +816,7 @@ figcaption{
     padding-bottom: 2em;
   }
   .brand-link{
-    width:17em;
+    width:16em;
     margin: 0 2.5em;
   }
   .main-nav a{
